@@ -1,6 +1,6 @@
 import React, { FC, useContext } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { Category, IClothing, ISeo, Item, Section } from "../../../../src/interfaces";
+import { Category, IHomeAppliance, ISeo, Item, Section } from "../../../../src/interfaces";
 import { ITEM, PRODUCTS_BY_ITEM } from "../../../../src/gql/query";
 import { Layout } from "../../../../components/Layout";
 import { HeadingPrimary, GridProduct } from "../../../../components/Components";
@@ -9,7 +9,7 @@ import { SBI } from "../../../../src/gql/siteQuery";
 import { UiContext } from "../../../../src/context";
 
 interface Props {
-  items: IClothing[]
+  items: IHomeAppliance[]
   seo: ISeo
 }
 
@@ -34,7 +34,7 @@ const ItemPage:FC<Props> = ({items, seo}) => {
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
   const { homeApplianceAll } = await graphQLClientP.request(ITEM , {site: `${process.env.API_SITE}`})
   
-  const paths = homeApplianceAll.map((data:IClothing) => ({
+  const paths = homeApplianceAll.map((data:IHomeAppliance) => ({
     params: data
   }))
   return {

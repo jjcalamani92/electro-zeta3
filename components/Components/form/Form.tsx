@@ -25,7 +25,7 @@ interface FormData {
   featured: string;
 
   color: string;
-  sizes: string[];
+  // sizes: string[];
 }
 interface Props {
   product: FormData
@@ -470,7 +470,7 @@ export const Form: FC<Props> = ({ product }) => {
                         </div>
                       </div>
 
-                      <div className="col-span-6 sm:col-span-2">
+                      {/* <div className="col-span-6 sm:col-span-2">
                         <fieldset
                         >
                           <legend className="contents text-xs lg:text-sm font-medium text-gray-900">Tallas</legend>
@@ -501,7 +501,7 @@ export const Form: FC<Props> = ({ product }) => {
                         <div>
                           {errors.sizes && <span className="text-xs lg:text-sm text-red-500">seleccione al menos una talla</span>}
                         </div>
-                      </div>
+                      </div> */}
 
                       <div className="col-span-6 sm:col-span-2">
                         <div>

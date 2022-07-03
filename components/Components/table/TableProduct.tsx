@@ -2,14 +2,14 @@ import Image from "next/image";
 import { useRouter } from 'next/router';
 import Link from "next/link";
 import React, { FC, useState } from "react";
-import { IClothing } from "../../../src/interfaces";
+import { IHomeAppliance } from "../../../src/interfaces";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare, faCircleMinus } from '@fortawesome/free-solid-svg-icons';
 import axios from "axios";
 import Swal from "sweetalert2";
 
 interface Props {
-  products: IClothing[];
+  products: IHomeAppliance[];
 }
 
 

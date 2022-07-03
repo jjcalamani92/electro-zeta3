@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Category, Featured, IClothing, IMark, Item, Section } from "../../src/interfaces";
+import { Category, Featured, IHomeAppliance, IMark, Item, Section } from "../../src/interfaces";
 import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/router";
@@ -7,7 +7,7 @@ import Image from "next/image";
 import Swal from "sweetalert2";
 
 interface Props {
-	products: IClothing[];
+	products: IHomeAppliance[];
 }
 interface LayoutMarkListAdmin {
 	marks: IMark[];

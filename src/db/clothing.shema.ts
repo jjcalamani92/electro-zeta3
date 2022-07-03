@@ -1,5 +1,5 @@
 import mongoose, { Schema, model, Model } from 'mongoose';
-import { IClothing } from '../interfaces';
+import { IHomeAppliance } from '../interfaces';
 
 const homeApplianceSchema = new Schema({
   name: { type: String, default: ''},
@@ -21,7 +21,7 @@ const homeApplianceSchema = new Schema({
   
 })
 
-const Clothing:Model<IClothing> = mongoose.models.Clothing || model('Clothing',homeApplianceSchema);
+const HomeAppliance:Model<IHomeAppliance> = mongoose.models.HomeAppliance || model('HomeAppliance',homeApplianceSchema);
 
-export default Clothing;
+export default HomeAppliance;
 

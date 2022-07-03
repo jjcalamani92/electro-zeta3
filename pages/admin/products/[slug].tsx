@@ -1,13 +1,13 @@
 import { NextPage, GetServerSideProps } from 'next';
 import { PRODUCT_BY_SLUG } from '../../../src/gql/query';
-import { IClothing } from "../../../src/interfaces";
+import { IHomeAppliance } from "../../../src/interfaces";
 import { GraphQLClient } from 'graphql-request';
 import { Form, HeadingTable, TableFeatured } from '../../../components/Components';
 import { Layout, LayoutAdmin } from '../../../components/Layout';
 import { useContext } from 'react';
 import { UiContext } from '../../../src/context';
 interface Props {
-	product: IClothing;
+	product: IHomeAppliance;
 }
 const client = new GraphQLClient(`${process.env.APIP_URL}/graphql`)
 const ProductPage: NextPage<Props> = ({ product }) => {
@@ -33,7 +33,7 @@ const ProductPage: NextPage<Props> = ({ product }) => {
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 	const { slug = '' } = query
-	let product:IClothing | null | any;
+	let product:IHomeAppliance | null | any;
 	if (slug === 'new') {
 		
     product = {

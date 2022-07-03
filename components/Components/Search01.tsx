@@ -4,7 +4,7 @@ import { XIcon } from '@heroicons/react/outline'
 import { UiContext } from '../../src/context'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { IClothing } from '../../src/interfaces'
+import { IHomeAppliance } from '../../src/interfaces'
 import Image from 'next/image'
 
 
@@ -125,7 +125,7 @@ export const Search01 = () => {
                             //     }
                             //   )
                             // })
-                            .map((product: IClothing, i: number) => (
+                            .map((product: IHomeAppliance, i: number) => (
                               <li key={i} className="flex py-6">
                                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                                   <Image

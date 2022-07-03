@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { FC, useContext, useState, } from "react";
 import { UiContext } from "../../src/context";
-import { IClothing } from "../../src/interfaces";
+import { IHomeAppliance } from "../../src/interfaces";
 import { SwiperDetail } from "./Swiper";
 import { useRouter } from 'next/router';
 import { RadioGroup } from '@headlessui/react';
@@ -13,12 +13,12 @@ function classNames(...classes: string[]) {
 }
 
 interface Props {
-	product: IClothing;
+	product: IHomeAppliance;
 }
 
 export const ProductOverviews: FC<Props> = ({ product }) => {
 	const { site } = useContext(UiContext)
-  const [selectedSize, setSelectedSize] = useState(product.sizes[2])
+  // const [selectedSize, setSelectedSize] = useState(product.sizes[2])
 	const router = useRouter()
 	return (
 		<>
@@ -56,7 +56,7 @@ export const ProductOverviews: FC<Props> = ({ product }) => {
                     Guia de tallas
                   </a>
                 </div>
-
+{/*
                 <RadioGroup value={selectedSize} onChange={setSelectedSize} className="mt-4">
                   <RadioGroup.Label className="sr-only">Choose a size</RadioGroup.Label>
                   <div className="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
@@ -102,13 +102,13 @@ export const ProductOverviews: FC<Props> = ({ product }) => {
                                   <line x1={0} y1={100} x2={100} y2={0} vectorEffect="non-scaling-stroke" />
                                 </svg>
                               </span>
-                            )} */}
+                            )} 
                           </>
                         )}
                       </RadioGroup.Option>
                     ))}
                   </div>
-                </RadioGroup>
+                </RadioGroup> */}
               </div>
 								{/* <button
 									type="submit"

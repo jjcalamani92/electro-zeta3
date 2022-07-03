@@ -5,12 +5,12 @@ import { Layout, LayoutAdmin } from "../../components/Layout";
 import { useQuery } from "@apollo/client";
 import { GetServerSideProps } from "next";
 import { graphQLClientP } from "../../src/graphQLClient";
-import { IClothing } from "../../src/interfaces";
+import { IHomeAppliance } from "../../src/interfaces";
 import { UiContext } from "../../src/context";
 
 interface Props {
-	homeApplianceAll: IClothing[]
-	homeAppliancesAll: IClothing[]
+	homeApplianceAll: IHomeAppliance[]
+	homeAppliancesAll: IHomeAppliance[]
 }
 
 const PAGE_SIZE = 6;

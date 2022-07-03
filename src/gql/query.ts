@@ -1,14 +1,14 @@
 import { gql } from "@apollo/client";
 
 export const PBS = gql`
-	query ClothingAll($site: String!) {
+	query HomeApplianceAll($site: String!) {
 		homeApplianceAll(site: $site) {
 			slug
 		}
 	}
 `;
 export const PRODUCTS = gql`
-	query ClothingAll($site: String!) {
+	query HomeApplianceAll($site: String!) {
 		homeApplianceAll(site: $site) {
 			_id
 			name
@@ -24,14 +24,14 @@ export const PRODUCTS = gql`
 `;
 
 export const CATEGORY = gql`
-	query ClothingAll($site: String!) {
+	query HomeApplianceAll($site: String!) {
 		homeApplianceAll(site: $site) {
 			category
 		}
 	}
 `;
 export const SECTION = gql`
-	query ClothingAll($site: String!) {
+	query HomeApplianceAll($site: String!) {
 		homeApplianceAll(site: $site) {
 			category
 			section
@@ -39,7 +39,7 @@ export const SECTION = gql`
 	}
 `;
 export const ITEM = gql`
-	query ClothingAll($site: String!) {
+	query HomeApplianceAll($site: String!) {
 		homeApplianceAll(site: $site) {
 			category
 			section
@@ -49,7 +49,7 @@ export const ITEM = gql`
 `;
 
 // export const CLOTHINGS = gql`
-// 	query Clothings {
+// 	query HomeAppliances {
 // 		homeAppliances {
 // 			_id
 // 			name
@@ -69,7 +69,7 @@ export const ITEM = gql`
 // `;
 
 export const PRODUCTS_BY_ITEM = gql`
-	query ClothingByCategoryAndSectionAndItem($category: String!, $section: String!, $item: String!, $site: String!) {
+	query HomeApplianceByCategoryAndSectionAndItem($category: String!, $section: String!, $item: String!, $site: String!) {
 		homeApplianceByCategoryAndSectionAndItem(category: $category, section: $section, item: $item, site: $site) {
 			name
 			price
@@ -81,7 +81,7 @@ export const PRODUCTS_BY_ITEM = gql`
 	}
 `;
 export const PRODUCTS_BY_SECTION = gql`
-	query ClothingByCategoryAndSectionAndItem($category: String!, $section: String!, $item: String!, $site: String!) {
+	query HomeApplianceByCategoryAndSectionAndItem($category: String!, $section: String!, $item: String!, $site: String!) {
 		homeApplianceByCategoryAndSectionAndItem(category: $category, section: $section, item: $item, site: $site) {
 			name
 			price
@@ -92,7 +92,7 @@ export const PRODUCTS_BY_SECTION = gql`
 `;
 
 export const PRODUCT_BY_OFFER = gql`
-	query ClothingOffer( $site: String!) {
+	query HomeApplianceOffer( $site: String!) {
 		homeApplianceOffer(site: $site) {
 			_id
 			name
@@ -110,13 +110,12 @@ export const PRODUCT_BY_OFFER = gql`
 			featured
 
 			color
-			sizes
 
 		}
 	}
 `;
 export const PRODUCT_BY_PROMOTION = gql`
-	query ClothingPromotion( $site: String!) {
+	query HomeAppliancePromotion( $site: String!) {
 		homeAppliancePromotion( site: $site) {
 			_id
 			name
@@ -134,13 +133,12 @@ export const PRODUCT_BY_PROMOTION = gql`
 			featured
 
 			color
-			sizes
 
 		}
 	}
 `;
 export const PRODUCT_BY_FEATURED = gql`
-	query ClothingByFeatured($featured: String!, $site: String!) {
+	query HomeApplianceByFeatured($featured: String!, $site: String!) {
 		homeApplianceByFeatured(featured: $featured, site: $site) {
 			_id
 			name
@@ -158,13 +156,12 @@ export const PRODUCT_BY_FEATURED = gql`
 			featured
 
 			color
-			sizes
 
 		}
 	}
 `;
 export const PRODUCT_BY_SLUG = gql`
-	query ClothingBySlug($slug: String!, $site: String!) {
+	query HomeApplianceBySlug($slug: String!, $site: String!) {
 		homeApplianceBySlug(slug: $slug, site: $site) {
 			_id
 			name
@@ -182,7 +179,6 @@ export const PRODUCT_BY_SLUG = gql`
 
 			featured
 			color
-			sizes
 
 		}
 	}
@@ -190,7 +186,7 @@ export const PRODUCT_BY_SLUG = gql`
 
 
 export const PRODUCT_ALL = gql`
-	query ClothingsAll($limit: Float!, $offset:Float!, $site: String!) {
+	query HomeAppliancesAll($limit: Float!, $offset:Float!, $site: String!) {
 		homeAppliancesAll(input:  { limit: $limit, offset: $offset}, site:$site ) {
 			_id
 			name
@@ -207,7 +203,6 @@ export const PRODUCT_ALL = gql`
 
 			featured
 			color
-			sizes
 		}
 
 }

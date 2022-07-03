@@ -1,6 +1,6 @@
 import { FC, useContext } from 'react';
 import { GetStaticPaths, GetStaticProps } from "next";
-import { IClothing, } from "../../src/interfaces";
+import { IHomeAppliance, } from "../../src/interfaces";
 import { CATEGORY } from "../../src/gql/query";
 import { Category, Featured, ISeo, Site} from '../../src/interfaces/Site';
 import { SBF, SBS } from "../../src/gql/siteQuery";
@@ -81,7 +81,7 @@ export default CategoryPage;
 
 // import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 
-// import { IClothing, } from "../../src/interfaces";
+// import { IHomeAppliance, } from "../../src/interfaces";
 // import { CATEGORY } from "../../src/gql/query";
 // import { client } from "../../src/apollo";
 // import { Category} from '../../src/interfaces/Site';
@@ -147,7 +147,7 @@ export default CategoryPage;
 //   //   variables: { site: `${process.env.API_SITE}`},
 // 	// });
 // 	// console.log(data)
-// 	const paths = homeApplianceAll.map((data:IClothing) => ({
+// 	const paths = homeApplianceAll.map((data:IHomeAppliance) => ({
 //     params: { category: data.category}
 //   }))
 // 	return {

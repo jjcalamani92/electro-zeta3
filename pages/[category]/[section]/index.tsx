@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import { Category,Section, IClothing, ISeo } from "../../../src/interfaces";
+import { Category,Section, IHomeAppliance, ISeo } from "../../../src/interfaces";
 import React, { FC, useContext } from "react";
 import { SECTION } from "../../../src/gql/query";
 import { SBI } from "../../../src/gql/siteQuery";
@@ -32,7 +32,7 @@ const SectionPage:FC<Props> = ({seo, section}) => {
 };
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
   const { homeApplianceAll } = await graphQLClientP.request(SECTION , {site: `${process.env.API_SITE}`})
-  const paths = homeApplianceAll.map((data:IClothing) => ({
+  const paths = homeApplianceAll.map((data:IHomeAppliance) => ({
     params: data
   }))
   return {

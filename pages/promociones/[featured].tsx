@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import { Category,Section, IClothing, ISeo, Featured } from "../../src/interfaces";
+import { Category,Section, IHomeAppliance, ISeo, Featured } from "../../src/interfaces";
 import React, { FC, useContext } from "react";
 import { PRODUCT_BY_FEATURED, PRODUCT_BY_OFFER, SECTION } from "../../src/gql/query";
 import { SBF, SBI } from "../../src/gql/siteQuery";
@@ -12,7 +12,7 @@ interface Props {
   seo: ISeo
   section: Section
   feature: Featured
-  products: IClothing[]
+  products: IHomeAppliance[]
 }
 
 const FeaturedPage:FC<Props> = ({seo, section, feature, products}) => {

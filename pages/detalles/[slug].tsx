@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { FC, useContext } from 'react';
-import { Category, IClothing, ISeo, Item, Section } from "../../src/interfaces";
+import { Category, IHomeAppliance, ISeo, Item, Section } from "../../src/interfaces";
 import { PBS, PRODUCT_BY_SLUG } from "../../src/gql/query";
 import { ProductOverviews, HeadingPrimary } from "../../components/Components";
 import { Layout } from "../../components/Layout";
@@ -9,7 +9,7 @@ import { SBI } from "../../src/gql/siteQuery";
 import { UiContext } from "../../src/context";
 
 interface SlugPage {
-	product: IClothing
+	product: IHomeAppliance
 	seo: ISeo
 }
 
@@ -29,7 +29,7 @@ const SlugPage: NextPage<SlugPage> = ({ product, seo }) => {
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
 	const { homeApplianceAll } = await graphQLClientP.request(PBS , {site: `${process.env.API_SITE}`})
 
-	const paths = homeApplianceAll.map((data: IClothing) => ({
+	const paths = homeApplianceAll.map((data: IHomeAppliance) => ({
 		params: { slug: data.slug }
 	}));
 	return {
@@ -81,7 +81,7 @@ export default SlugPage;
 
 // import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 // import { useQuery } from "@apollo/client";
-// import { IClothing } from "../../src/interfaces";
+// import { IHomeAppliance } from "../../src/interfaces";
 // import { CLOTHINGS, PRODUCT_BY_SLUG } from "../../src/gql/query";
 // import { client } from "../../src/apollo";
 // import { Spinner01, ProductOverviews05 } from "../../components/Components";
@@ -114,7 +114,7 @@ export default SlugPage;
 // 	const { data } = await client.query({
 // 		query: CLOTHINGS
 // 	});
-// 	const paths = data.homeAppliances.map((data: IClothing) => ({
+// 	const paths = data.homeAppliances.map((data: IHomeAppliance) => ({
 // 		params: { slug: data.slug }
 // 	}));
 // 	return {
