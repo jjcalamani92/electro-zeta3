@@ -4,7 +4,7 @@ export const Home = () => {
 		<section className="relative bg-white">
 			<img
 				className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
-				src="https://res.cloudinary.com/dvcyhn0lj/image/upload/v1654827103/piccoletti/neckties-210347_960_720_kqt0qc.jpg"
+				src="https://res.cloudinary.com/dvcyhn0lj/image/upload/v1656213894/React-jj/blogs/i/11-mitos-electrodomesticos-hora-dejes-creerte-2157733_tdbc3k.webp"
 				alt="Couple on a bed with a dog"
 			/>
 			<div className="hidden sm:block sm:inset-0 sm:absolute sm:bg-gradient-to-r sm:from-white sm:to-transparent"></div>
@@ -18,7 +18,7 @@ export const Home = () => {
 						</strong>
 					</h1>
 					<p className="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
-						Tienda de ropa online
+					Tienda Online de Electrodomesticos
 					</p>
 
 					<div className="flex flex-wrap gap-4 mt-8 text-center">
