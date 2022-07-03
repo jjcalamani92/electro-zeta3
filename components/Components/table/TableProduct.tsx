@@ -43,7 +43,7 @@ export const TableProduct: FC<Props> = ({ products }) => {
 					}),
 				// await axios.put(`${process.env.APIS_URL}/api/site/removecategory/${process.env.API_SITE}`, {category: id})
 				// await axios.put(`${process.env.APIS_URL}/api/site/removesection/${process.env.API_SITE}`, data)
-        await axios.delete(`${process.env.APIP_URL}/api/clothing/${id}`)
+        await axios.delete(`${process.env.APIP_URL}/api/homeAppliance/${id}`)
 				router.reload()
 			}
 		})

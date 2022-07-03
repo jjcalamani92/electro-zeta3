@@ -32,9 +32,9 @@ const ItemPage:FC<Props> = ({items, seo}) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
-  const { clothingAll } = await graphQLClientP.request(ITEM , {site: `${process.env.API_SITE}`})
+  const { homeApplianceAll } = await graphQLClientP.request(ITEM , {site: `${process.env.API_SITE}`})
   
-  const paths = clothingAll.map((data:IClothing) => ({
+  const paths = homeApplianceAll.map((data:IClothing) => ({
     params: data
   }))
   return {
@@ -61,10 +61,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 	}
 
 
-  const { clothingByCategoryAndSectionAndItem } = await graphQLClientP.request(PRODUCTS_BY_ITEM, {category: `${category}`, section: `${section}`, item: `${item}`, site: `${process.env.API_SITE}`})
+  const { homeApplianceByCategoryAndSectionAndItem } = await graphQLClientP.request(PRODUCTS_BY_ITEM, {category: `${category}`, section: `${section}`, item: `${item}`, site: `${process.env.API_SITE}`})
   return {
     props: {
-      items: clothingByCategoryAndSectionAndItem,
+      items: homeApplianceByCategoryAndSectionAndItem,
       seo: {
         category: {
           name: res.name,

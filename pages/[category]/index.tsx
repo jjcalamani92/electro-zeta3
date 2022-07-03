@@ -139,15 +139,15 @@ export default CategoryPage;
 // 	// console.log(JSON.stringify(datas, undefined, 2))
 // 	// const {site} = await graphQLClientS.request(SBS, {id: process.env.API_SITE})
 // 	// console.log(JSON.stringify(site, undefined, 2))
-//   const { clothingAll } = await graphQLClientP.request(CATEGORY, { site: `${process.env.API_SITE}`})
-// 	// console.log(JSON.stringify(clothingAll, undefined, 2 ));
-// 	// console.log(clothingAll)
+//   const { homeApplianceAll } = await graphQLClientP.request(CATEGORY, { site: `${process.env.API_SITE}`})
+// 	// console.log(JSON.stringify(homeApplianceAll, undefined, 2 ));
+// 	// console.log(homeApplianceAll)
 // 	// const { data } = await client.query({
 // 	// 	query: CATEGORY,
 //   //   variables: { site: `${process.env.API_SITE}`},
 // 	// });
 // 	// console.log(data)
-// 	const paths = clothingAll.map((data:IClothing) => ({
+// 	const paths = homeApplianceAll.map((data:IClothing) => ({
 //     params: { category: data.category}
 //   }))
 // 	return {

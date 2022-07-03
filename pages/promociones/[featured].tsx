@@ -57,12 +57,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 	}, [])
   const re = pat.find((data: { href: string; }) => data.href === `${featured}`)
 
-  const { clothingByFeatured } = await graphQLClientP.request(PRODUCT_BY_FEATURED, {featured:  `${featured}`, site: `${process.env.API_SITE}`})
+  const { homeApplianceByFeatured } = await graphQLClientP.request(PRODUCT_BY_FEATURED, {featured:  `${featured}`, site: `${process.env.API_SITE}`})
 
   return {
     props: { 
       feature: re, 
-      products: clothingByFeatured
+      products: homeApplianceByFeatured
     },
     revalidate: 86400000
   };

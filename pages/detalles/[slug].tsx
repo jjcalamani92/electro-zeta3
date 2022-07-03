@@ -27,9 +27,9 @@ const SlugPage: NextPage<SlugPage> = ({ product, seo }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
-	const { clothingAll } = await graphQLClientP.request(PBS , {site: `${process.env.API_SITE}`})
+	const { homeApplianceAll } = await graphQLClientP.request(PBS , {site: `${process.env.API_SITE}`})
 
-	const paths = clothingAll.map((data: IClothing) => ({
+	const paths = homeApplianceAll.map((data: IClothing) => ({
 		params: { slug: data.slug }
 	}));
 	return {
@@ -41,23 +41,23 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
 	const { slug = "" } = params as { slug: string };
 
-	const { clothingBySlug } = await graphQLClientP.request(PRODUCT_BY_SLUG, {slug: `${slug}`, site: `${process.env.API_SITE}`})
+	const { homeApplianceBySlug } = await graphQLClientP.request(PRODUCT_BY_SLUG, {slug: `${slug}`, site: `${process.env.API_SITE}`})
 		const { site } = await graphQLClientS.request(SBI, {id: process.env.API_SITE})
 	const res = site.categories.find(findCategory)
 	function findCategory(res:Category){
-		return res.href === `${clothingBySlug.category}`;
+		return res.href === `${homeApplianceBySlug.category}`;
 	}
   const re = res.sections.find(findSection)
 	function findSection(re:Section){
-		return re.href === `${clothingBySlug.section}`;
+		return re.href === `${homeApplianceBySlug.section}`;
 	}
   const r = re.items.find(findItem)
 	function findItem(r:Item){
-		return r.href === `${clothingBySlug.item}`;
+		return r.href === `${homeApplianceBySlug.item}`;
 	}
 	return {
 		props: {
-			product: clothingBySlug,
+			product: homeApplianceBySlug,
 			seo: {
         category: {
           name: res.name,
@@ -103,8 +103,8 @@ export default SlugPage;
 // 			title={"- Detalles"}
 // 			pageDescription={"Detalles de los productos"}
 // 		>
-//       <Heading01 category={`${data.clothingBySlug.category}`} section={`${data.clothingBySlug.section}`} item={`${data.clothingBySlug.item}`} name={`${data.clothingBySlug.name}`}/>
-// 			<ProductOverviews05 product={data.clothingBySlug} />
+//       <Heading01 category={`${data.homeApplianceBySlug.category}`} section={`${data.homeApplianceBySlug.section}`} item={`${data.homeApplianceBySlug.item}`} name={`${data.homeApplianceBySlug.name}`}/>
+// 			<ProductOverviews05 product={data.homeApplianceBySlug} />
 // 		</Layout>
 // 	);
 // };
@@ -114,7 +114,7 @@ export default SlugPage;
 // 	const { data } = await client.query({
 // 		query: CLOTHINGS
 // 	});
-// 	const paths = data.clothings.map((data: IClothing) => ({
+// 	const paths = data.homeAppliances.map((data: IClothing) => ({
 // 		params: { slug: data.slug }
 // 	}));
 // 	return {

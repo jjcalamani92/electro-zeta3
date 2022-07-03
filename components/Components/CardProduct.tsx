@@ -44,7 +44,7 @@ export const CardComponent: FC<CardComponent> = ({ name, imageSrc, imageAlt, des
 						timer: 1000,
 						showConfirmButton: false,
 					}),
-				await axios.delete(`${process.env.APIP_URL}/api/clothing/${id}`)
+				await axios.delete(`${process.env.APIP_URL}/api/homeAppliance/${id}`)
 				router.reload()
 			}
 		})

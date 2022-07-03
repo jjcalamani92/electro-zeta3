@@ -57,7 +57,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 		const data = await client.request(
 			PRODUCT_BY_SLUG, { slug: query.slug, site: process.env.API_SITE }
 		);
-		product = data.clothingBySlug
+		product = data.homeApplianceBySlug
 	}
 return {
 	props: {

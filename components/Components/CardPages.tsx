@@ -46,7 +46,7 @@ export const CardPages: FC<CardPages> = ({ name, imageSrc, imageAlt, description
 						timer: 1000,
 						showConfirmButton: false,
 					}),
-				// await axios.delete(`${process.env.APIP_URL}/api/clothing/${id}`)
+				// await axios.delete(`${process.env.APIP_URL}/api/homeAppliance/${id}`)
 				// router.reload()
         console.log('producto')
 			} 

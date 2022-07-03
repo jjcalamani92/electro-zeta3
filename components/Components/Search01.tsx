@@ -21,7 +21,7 @@ export const Search01 = () => {
   }
 
   useEffect(() => {
-    // const { clothingAll } = await graphQLClientP.request(CATEGORY, { site: `${process.env.API_SITE}` })
+    // const { homeApplianceAll } = await graphQLClientP.request(CATEGORY, { site: `${process.env.API_SITE}` })
   }, []);
 
   return (

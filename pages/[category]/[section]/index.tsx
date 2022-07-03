@@ -31,8 +31,8 @@ const SectionPage:FC<Props> = ({seo, section}) => {
   );
 };
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
-  const { clothingAll } = await graphQLClientP.request(SECTION , {site: `${process.env.API_SITE}`})
-  const paths = clothingAll.map((data:IClothing) => ({
+  const { homeApplianceAll } = await graphQLClientP.request(SECTION , {site: `${process.env.API_SITE}`})
+  const paths = homeApplianceAll.map((data:IClothing) => ({
     params: data
   }))
   return {

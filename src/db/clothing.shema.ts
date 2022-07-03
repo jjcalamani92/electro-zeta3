@@ -1,7 +1,7 @@
 import mongoose, { Schema, model, Model } from 'mongoose';
 import { IClothing } from '../interfaces';
 
-const clothingSchema = new Schema({
+const homeApplianceSchema = new Schema({
   name: { type: String, default: ''},
   brand: { type: String, default: ''},
   image: [{ type: String}],
@@ -21,7 +21,7 @@ const clothingSchema = new Schema({
   
 })
 
-const Clothing:Model<IClothing> = mongoose.models.Clothing || model('Clothing',clothingSchema);
+const Clothing:Model<IClothing> = mongoose.models.Clothing || model('Clothing',homeApplianceSchema);
 
 export default Clothing;
 
