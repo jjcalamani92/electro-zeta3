@@ -4,7 +4,7 @@ export const Home = () => {
 		<section className="relative bg-white">
 			<img
 				className="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
-				src="https://res.cloudinary.com/dvcyhn0lj/image/upload/v1656213894/React-jj/blogs/i/11-mitos-electrodomesticos-hora-dejes-creerte-2157733_tdbc3k.webp"
+				src="https://res.cloudinary.com/dno4gyfgn/image/upload/v1656938856/shutterstock_283562873-1536x1024_fkqaz9.jpg"
 				alt="Couple on a bed with a dog"
 			/>
 			<div className="hidden sm:block sm:inset-0 sm:absolute sm:bg-gradient-to-r sm:from-white sm:to-transparent"></div>
