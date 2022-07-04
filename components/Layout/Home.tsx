@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export const Home = () => {
 	return (
@@ -22,19 +23,22 @@ export const Home = () => {
 					</p>
 
 					<div className="flex flex-wrap gap-4 mt-8 text-center">
-						<a
-							className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-red-500 sm:w-auto active:bg-red-500 hover:bg-red-600 focus:outline-none focus:ring"
-							href=""
-						>
-							Ver Productos
-						</a>
+						<Link href="#">
 
-						<a
-							className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-red-500 sm:w-auto hover:text-red-600 active:text-red-500 focus:outline-none focus:ring"
-							href=""
-						>
-							Descuentos
-						</a>
+							<a
+								className="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-red-500 sm:w-auto active:bg-red-500 hover:bg-red-600 focus:outline-none focus:ring"
+							>
+								Ver Productos
+							</a>
+						</Link>
+						<Link href="/promociones">
+
+							<a
+								className="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-red-500 sm:w-auto hover:text-red-600 active:text-red-500 focus:outline-none focus:ring"
+							>
+								Descuentos
+							</a>
+						</Link>
 					</div>
 				</div>
 			</div>
