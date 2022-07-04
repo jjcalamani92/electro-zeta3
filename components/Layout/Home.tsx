@@ -18,7 +18,7 @@ export const Home = () => {
 						</strong>
 					</h1>
 					<p className="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
-					Tienda Online de Electrodomesticos
+					Tienda Online
 					</p>
 
 					<div className="flex flex-wrap gap-4 mt-8 text-center">
