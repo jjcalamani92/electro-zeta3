@@ -50,12 +50,12 @@ export const ProductOverviews: FC<Props> = ({ product }) => {
 						<div className="mb-4">
 						<form >
 							<div className="mt-6">
-                <div className="flex items-center justify-between">
+                {/* <div className="flex items-center justify-between">
                   <h3 className="text-sm text-gray-900 font-medium">Tallas</h3>
                   <a href="#" className="text-sm font-medium text-red-600 hover:text-red-500">
                     Guia de tallas
                   </a>
-                </div>
+                </div> */}
 {/*
                 <RadioGroup value={selectedSize} onChange={setSelectedSize} className="mt-4">
                   <RadioGroup.Label className="sr-only">Choose a size</RadioGroup.Label>
